@@ -35,7 +35,8 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 public class NvlTime extends Nvl {
   public NvlTime() {
     super(new Column[] {
-      new Column("params", TajoDataTypes.Type.TIME),
+      new Column("expr1", TajoDataTypes.Type.TIME),
+      new Column("expr2", TajoDataTypes.Type.TIME)
     });
   }
 }

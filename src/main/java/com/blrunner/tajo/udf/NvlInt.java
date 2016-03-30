@@ -35,7 +35,8 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 public class NvlInt extends Nvl {
   public NvlInt() {
     super(new Column[] {
-      new Column("params", TajoDataTypes.Type.INT4),
+      new Column("expr1", TajoDataTypes.Type.INT4),
+      new Column("expr2", TajoDataTypes.Type.INT4)
     });
   }
 }

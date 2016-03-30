@@ -35,7 +35,8 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 public class NvlFloat extends Nvl {
   public NvlFloat() {
     super(new Column[] {
-      new Column("params", TajoDataTypes.Type.FLOAT4),
+      new Column("expr1", TajoDataTypes.Type.FLOAT4),
+      new Column("expr2", TajoDataTypes.Type.FLOAT4)
     });
   }
 }

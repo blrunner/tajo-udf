@@ -35,7 +35,8 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 public class NvlBoolean extends Nvl {
   public NvlBoolean() {
     super(new Column[] {
-      new Column("params", TajoDataTypes.Type.BOOLEAN),
+      new Column("expr1", TajoDataTypes.Type.BOOLEAN),
+      new Column("expr2", TajoDataTypes.Type.BOOLEAN)
     });
   }
 }

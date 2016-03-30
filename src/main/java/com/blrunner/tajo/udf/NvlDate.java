@@ -35,7 +35,8 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 public class NvlDate extends Nvl {
   public NvlDate() {
     super(new Column[] {
-      new Column("params", TajoDataTypes.Type.DATE),
+      new Column("expr1", TajoDataTypes.Type.DATE),
+      new Column("expr2", TajoDataTypes.Type.DATE)
     });
   }
 }
