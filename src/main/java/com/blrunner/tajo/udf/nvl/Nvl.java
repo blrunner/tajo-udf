@@ -23,6 +23,16 @@ import org.apache.tajo.datum.Datum;
 import org.apache.tajo.plan.function.GeneralFunction;
 import org.apache.tajo.storage.Tuple;
 
+/**
+ * Abstract UDF Class for SQL construct "nvl(expr1, expr2)". see <a href=
+ * "http://download.oracle.com/docs/cd/B19306_01/server.102/b14200/functions105.htm" >NVL</a>.
+ * <p>
+ * There is function <code>COALESCE</code> in Tajo,
+ * but it is convenient to convert from Oracle SQL to Tajo SQL without query
+ * changes.
+ * <p>
+ *
+ */
 abstract class Nvl extends GeneralFunction {
   public Nvl(Column[] definedArgs) {
     super(definedArgs);
