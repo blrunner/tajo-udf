@@ -12,7 +12,7 @@ Blrunner Tajo UDFs is a collection of user defined functions for Tajo.
     $ mvn clean install
 
 ## Install and Configurations
-Copy UDF jar file to $TAJO_HOME/lib on all cluster
+Copy the UDF jar file into ``$TAJO_HOME/lib`` on all cluster
 
 ## References
 * [Nexr Hive UDF](https://github.com/nexr/hive-udf)
