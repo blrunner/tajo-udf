@@ -55,6 +55,24 @@ public class TestDateTimeFunctions extends ExprTest {
     }
   }
 
+  @Test
+  public void testLastDay() throws TajoException {
+    TimeZone originalTimezone = TimeZone.getDefault();
+    TimeZone.setDefault(TimeZone.getTimeZone("GMT-6"));
+
+    QueryContext context = new QueryContext(getConf());
+    context.put(SessionVars.TIMEZONE, "GMT-6");
+
+    try {
+      testSimpleEval(context, "select last_day(cast('2016-03-29 17:10:00' as date));", new String[]{"2016-03-31"});
+      testSimpleEval(context, "select last_day(cast('2009-02-18 15:45:53' as date));", new String[]{"2009-02-28"});
+      testSimpleEval(context, "select last_day(cast('1997-06-15 15:45:53' as date));", new String[]{"1997-06-30"});
+      testSimpleEval(context, "select last_day(cast('2016-10-15 17:10:00' as date));", new String[]{"2016-10-31"});
+    } finally {
+      TimeZone.setDefault(originalTimezone);
+    }
+  }
+
   private String dateFormat(Date date, String format) {
     SimpleDateFormat df = new SimpleDateFormat(format);
     return df.format(date);

@@ -6,6 +6,7 @@ This project supports following functions:
 
 * NVL
 * SYSDATE
+* LAST_DAY
 
 ## Requirements
 

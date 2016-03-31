@@ -79,7 +79,6 @@ public class SysDate extends GeneralFunction {
   public void init(OverridableConf context, FunctionEval.ParamType[] types) {
     String timezoneId = context.get(SessionVars.TIMEZONE, "GMT");
     this.timezone = TimeZone.getTimeZone(timezoneId);
-    System.out.println("### timezone:" + timezone);
   }
 
   @Override
