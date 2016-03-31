@@ -4,9 +4,10 @@ Apache Tajo is a robust big data relational and distributed data warehouse syste
 
 This project supports following functions:
 
+* GREATEST
+* LAST_DAY
 * NVL
 * SYSDATE
-* LAST_DAY
 
 ## Requirements
 
