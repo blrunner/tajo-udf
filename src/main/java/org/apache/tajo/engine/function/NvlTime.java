@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.blrunner.tajo.udf;
+package org.apache.tajo.engine.function;
 
 import org.apache.tajo.catalog.Column;
 import org.apache.tajo.common.TajoDataTypes;
@@ -28,14 +28,15 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
   description = "If expr1 is null, then NVL returns expr2. If expr1 is not null, then NVL returns expr1.",
   example = "> SELECT nvl(dept, 'Not Applicable') FROM src;\n" +
     " 'Not Applicable' if dept is null\n",
-  returnType = TajoDataTypes.Type.FLOAT4,
-  paramTypes = {@ParamTypes(paramTypes = {TajoDataTypes.Type.FLOAT4, TajoDataTypes.Type.FLOAT4})}
+  returnType = TajoDataTypes.Type.TIME,
+  paramTypes = {@ParamTypes(paramTypes = {TajoDataTypes.Type.TIME, TajoDataTypes.Type.TIME})}
 )
-public class NvlFloat extends Nvl {
-  public NvlFloat() {
+public class NvlTime extends Nvl {
+  public NvlTime() {
     super(new Column[] {
-      new Column("expr1", TajoDataTypes.Type.FLOAT4),
-      new Column("expr2", TajoDataTypes.Type.FLOAT4)
+      new Column("expr1", TajoDataTypes.Type.TIME),
+      new Column("expr2", TajoDataTypes.Type.TIME)
     });
   }
 }
+

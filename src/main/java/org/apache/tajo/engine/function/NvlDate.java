@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.blrunner.tajo.udf;
+package org.apache.tajo.engine.function;
 
 import org.apache.tajo.catalog.Column;
 import org.apache.tajo.common.TajoDataTypes;

@@ -16,26 +16,35 @@
  * limitations under the License.
  */
 
-package com.blrunner.tajo.udf;
+package org.apache.tajo.engine.function;
 
 import org.apache.tajo.catalog.Column;
-import org.apache.tajo.common.TajoDataTypes;
-import org.apache.tajo.engine.function.annotation.Description;
-import org.apache.tajo.engine.function.annotation.ParamTypes;
+import org.apache.tajo.datum.Datum;
+import org.apache.tajo.plan.function.GeneralFunction;
+import org.apache.tajo.storage.Tuple;
 
-@Description(
-  functionName = "nvl",
-  description = "If expr1 is null, then NVL returns expr2. If expr1 is not null, then NVL returns expr1.",
-  example = "> SELECT nvl(dept, 'Not Applicable') FROM src;\n" +
-    " 'Not Applicable' if dept is null\n",
-  returnType = TajoDataTypes.Type.INT4,
-  paramTypes = {@ParamTypes(paramTypes = {TajoDataTypes.Type.INT4, TajoDataTypes.Type.INT4})}
-)
-public class NvlInt extends Nvl {
-  public NvlInt() {
-    super(new Column[] {
-      new Column("expr1", TajoDataTypes.Type.INT4),
-      new Column("expr2", TajoDataTypes.Type.INT4)
-    });
+/**
+ * Abstract UDF Class for SQL construct "nvl(expr1, expr2)". see <a href=
+ * "http://download.oracle.com/docs/cd/B19306_01/server.102/b14200/functions105.htm" >NVL</a>.
+ * <p>
+ * There is function <code>COALESCE</code> in Tajo,
+ * but it is convenient to convert from Oracle SQL to Tajo SQL without query
+ * changes.
+ * <p>
+ *
+ */
+abstract class Nvl extends GeneralFunction {
+  public Nvl(Column[] definedArgs) {
+    super(definedArgs);
+  }
+
+  @Override
+  public Datum eval(Tuple params) {
+    if (params.isBlankOrNull(0)) {
+      return params.asDatum(1);
+    } else {
+      return params.asDatum(0);
+    }
   }
 }
+

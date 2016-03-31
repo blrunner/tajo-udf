@@ -16,12 +16,11 @@
  * limitations under the License.
  */
 
-package com.blrunner.tajo.udf;
+package org.apache.tajo.engine.function;
 
 import org.apache.tajo.SessionVars;
 import org.apache.tajo.engine.query.QueryContext;
 import org.apache.tajo.exception.TajoException;
-import org.apache.tajo.util.datetime.DateTimeUtil;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;

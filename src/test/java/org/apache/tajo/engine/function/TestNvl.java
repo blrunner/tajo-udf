@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.blrunner.tajo.udf;
+package org.apache.tajo.engine.function;
 
 import org.apache.tajo.exception.UndefinedFunctionException;
 import org.junit.Test;
