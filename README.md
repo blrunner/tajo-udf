@@ -5,6 +5,7 @@ Apache Tajo is a robust big data relational and distributed data warehouse syste
 This project supports following functions:
 
 * NVL
+* SYSDATE
 
 ## Requirements
 
@@ -27,7 +28,7 @@ It has a comprehensive set of unit tests that can take several minutes to run. Y
 
     mvn clean install -DskipTests
 
-## Install and Configurations
+## Deploying UDFs
 * Copy the UDF jar file into ``$TAJO_HOME/lib`` on all nodes
 * Restart Tajo cluster.
 
