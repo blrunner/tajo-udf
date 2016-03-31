@@ -28,6 +28,8 @@ It has a comprehensive set of unit tests that can take several minutes to run. Y
 
     mvn clean install -DskipTests
 
+If you want to add new UDF, the prefix of your package name must be ``org.apache.tajo.engine.function``.
+
 ## Deploying UDFs
 * Copy the UDF jar file into ``$TAJO_HOME/lib`` on all nodes
 * Restart Tajo cluster.
