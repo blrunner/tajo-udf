@@ -21,6 +21,7 @@ package com.blrunner.tajo.udf;
 import org.apache.tajo.SessionVars;
 import org.apache.tajo.engine.query.QueryContext;
 import org.apache.tajo.exception.TajoException;
+import org.apache.tajo.util.datetime.DateTimeUtil;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -40,12 +41,15 @@ public class TestDateTimeFunctions extends ExprTest {
     try {
       Date expectedDate = new Date(System.currentTimeMillis());
 
-      testSimpleEval(context, "select sysdate();",
+      testSimpleEval(context, "select sysdate('YYYY-MM-DD HH24:MI');",
+        new String[]{dateFormat(expectedDate, "yyyy-MM-dd HH:mm")});
+
+      testSimpleEval(context, "select sysdate('yyyy-MM-dd');",
         new String[]{dateFormat(expectedDate, "yyyy-MM-dd")});
 
       expectedDate.setDate(expectedDate.getDate() + 1);
 
-      testSimpleEval(context, "select sysdate() + 1;",
+      testSimpleEval(context, "select sysdate('yyyy-MM-dd', 1);",
         new String[]{dateFormat(expectedDate, "yyyy-MM-dd")});
     } finally {
       TimeZone.setDefault(originalTimezone);
