@@ -18,7 +18,6 @@
 
 package com.blrunner.tajo.udf;
 
-import com.blrunner.tajo.udf.Nvl;
 import org.apache.tajo.catalog.Column;
 import org.apache.tajo.common.TajoDataTypes;
 import org.apache.tajo.engine.function.annotation.Description;
