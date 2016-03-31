@@ -23,6 +23,17 @@ import org.apache.tajo.engine.function.annotation.Description;
 import org.apache.tajo.engine.function.annotation.ParamTypes;
 import org.apache.tajo.engine.function.datetime.CurrentDate;
 
+/**
+ * UDF for string function <code>CURDATE()</code>,
+ * <code>SYSDATE()</code>. This mimcs the function from MySQL
+ * http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_sysdate
+ *
+ * <pre>
+ * usage:
+ * SYSDATE()
+ * </pre>
+ * <p>
+ */
 @Description(
   functionName = "sysdate",
   description = "Get current date. Result is DATE type.",
