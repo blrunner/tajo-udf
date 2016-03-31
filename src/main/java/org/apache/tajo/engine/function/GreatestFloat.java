@@ -26,7 +26,7 @@ import org.apache.tajo.engine.function.annotation.ParamTypes;
 @Description(
   functionName = "greatest",
   description = "Returns the greatest value in the list.",
-  example = "> SELECT greatest(2.0, 5.0, 12.0, 3.0);\n 12.0",
+  example = "> SELECT greatest(2.0, 5.0, 12.0, 3.0) FROM src;\n 12.0",
   returnType = TajoDataTypes.Type.FLOAT4,
   paramTypes = {@ParamTypes(paramTypes = {TajoDataTypes.Type.FLOAT4_ARRAY})}
 )

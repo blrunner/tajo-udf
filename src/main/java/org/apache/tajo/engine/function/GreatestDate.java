@@ -37,7 +37,3 @@ public class GreatestDate extends Greatest {
     });
   }
 }
-//    @HivePdkUnitTest(query = "SELECT nexr_greatest('2', '5', '12', '3') " +
-//      "FROM dual_data;", result = "5"),
-//    @HivePdkUnitTest(query = "SELECT nexr_greatest('apples', 'oranges', 'bananas') " +
-//      "FROM dual_data;", result = "oranges") })
