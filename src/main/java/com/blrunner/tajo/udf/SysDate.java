@@ -51,8 +51,8 @@ import java.util.TimeZone;
   description = "sysdate() - Returns the current date and time as a value in 'yyyy-MM-dd HH:mm:ss' format"
     +" sysdate(dateFormat) - Returns the current date and time as a value in given format"
     +" sysdate(dateFormat, num_days) - Returns the date that is num_days after current date in given date format",
-  example = "> SELECT sysdate();\n2016-04-01"+ "  > SELECT _FUNC_('yyyyMMdd') FROM src LIMIT 1;\n" + "20160401"
-    + "  > SELECT _FUNC_('yyyyMMdd',1) FROM src LIMIT 1;\n" + "20160402",
+  example = "> SELECT sysdate();\n2016-04-01"+ "  > SELECT sysdate('yyyyMMdd') FROM src LIMIT 1;\n" + "20160401"
+    + "  > SELECT sysdate('yyyyMMdd',1) FROM src LIMIT 1;\n" + "20160402",
   returnType = TajoDataTypes.Type.TEXT,
   paramTypes = {
     @ParamTypes(paramTypes = {}),
