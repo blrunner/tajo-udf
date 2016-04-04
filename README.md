@@ -7,6 +7,7 @@ This project supports following functions:
 * GREATEST
 * LAST_DAY
 * NVL
+* NVL2
 * SYSDATE
 
 ## Requirements
