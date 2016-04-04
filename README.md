@@ -8,6 +8,7 @@ This project supports following functions:
 * LAST_DAY
 * NVL
 * NVL2
+* REPLACE
 * SYSDATE
 
 ## Requirements
