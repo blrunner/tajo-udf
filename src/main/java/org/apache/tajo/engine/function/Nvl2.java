@@ -26,7 +26,7 @@ import org.apache.tajo.storage.Tuple;
 
 /**
  * Abstract UDF Class for SQL construct "nvl2(expr1, expr2, expr3)". see <a href=
- * "http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions106.htm" >NVL2</a>.
+ * "http://docs.oracle.com/cd/B28359_01/server.111/b28286/functions111.htm" >NVL2</a>.
  * <p>
  * There is function <code>COALESCE</code> in Tajo,
  * but it is convenient to convert from Oracle SQL to Tajo SQL without query

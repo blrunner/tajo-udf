@@ -29,7 +29,7 @@ import org.apache.tajo.storage.Tuple;
 
 /**
  * UDF for string function <code>REPLACE()</code>,
- * <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions134.htm">REPLACE</a>.
+ * <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28286/functions141.htm">REPLACE</a>.
  *
  */
 @Description(
