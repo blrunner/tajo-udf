@@ -30,7 +30,7 @@ import org.apache.tajo.storage.Tuple;
 import static org.apache.tajo.common.TajoDataTypes.Type.FLOAT8;
 
 /**
- * This returns x raised to the power of y.
+ * This is simple example for newbies and it returns x raised to the power of y.
  */
 @Description(
   functionName = "pow2",
